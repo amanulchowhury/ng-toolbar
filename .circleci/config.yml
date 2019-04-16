@@ -37,6 +37,9 @@ jobs:
       # run build
       - run: npm run build
 
+      # ls dist folder
+      - run: ls dist
+
   # The deploy job
   deploy:
       working_directory: ~/repo
