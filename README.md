@@ -1,5 +1,9 @@
 # NgToolbar
 
+demo
+----
+[ng-toolbar](http://ng-toolbar.s3-website-us-west-1.amazonaws.com/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
 
 ## Development server
