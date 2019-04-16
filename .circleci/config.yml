@@ -42,12 +42,7 @@ jobs:
           key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
               - dist
-
-      # ls dist folder
-      - run: |
-        cd dist
-        pwd
-
+              
   # The deploy job
   deploy:
       working_directory: ~/repo
