@@ -69,7 +69,7 @@ jobs:
           # Deploy to the S3 bucket corresponding to the current branch
           - run:
               name: Deploy to S3
-              command: aws --region us-west-1 s3 sync dist s3://ng-toolbar/ --delete
+              command: aws --region us-west-1 s3 sync dist/ng-toolbar s3://ng-toolbar/ --delete
 
 workflows:
     version: 2
