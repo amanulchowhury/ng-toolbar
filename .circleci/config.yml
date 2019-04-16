@@ -37,8 +37,16 @@ jobs:
       # run build
       - run: npm run build
 
+      # Cache the dist folder for the deploy job
+      - save_cache:
+          key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+              - dist
+
       # ls dist folder
-      - run: ls dist
+      - run: |
+        cd dist
+        pwd
 
   # The deploy job
   deploy:
