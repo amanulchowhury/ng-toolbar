@@ -42,7 +42,7 @@ jobs:
           key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
               - dist
-              
+
   # The deploy job
   deploy:
       working_directory: ~/repo
@@ -69,7 +69,7 @@ jobs:
           # Deploy to the S3 bucket corresponding to the current branch
           - run:
               name: Deploy to S3
-              command: aws --region eu-west-2 s3 sync dist s3://ng-toolbar/ --delete
+              command: aws --region eu-west-1 s3 sync dist s3://ng-toolbar/ --delete
 
 workflows:
     version: 2

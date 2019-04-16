@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --prod --no-progress",
     "test": "ng test",
     "testCI": "ng test --watch=false --progress=false --browsers=ChromeHeadlessCI",
     "lint": "ng lint",
